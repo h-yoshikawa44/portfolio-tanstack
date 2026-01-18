@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react-vite'
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Dialog } from './dialog'
-import { Button } from './button'
+import { Dialog } from './dialog';
+import { Button } from './button';
 
 const meta = {
   title: 'Form/Dialog',
@@ -10,10 +10,10 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Dialog>
+} satisfies Meta<typeof Dialog>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
@@ -26,7 +26,7 @@ export const Default: Story = {
       </div>
     ),
   },
-}
+};
 
 export const WithFooter: Story = {
   args: {
@@ -49,7 +49,7 @@ export const WithFooter: Story = {
       </div>
     ),
   },
-}
+};
 
 export const Form: Story = {
   args: {
@@ -89,4 +89,4 @@ export const Form: Story = {
       </div>
     ),
   },
-}
+};
