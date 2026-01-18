@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin '@egoist/tailwindcss-icons';
 
 /* sawarabi-mincho-latin-400-normal */
 @font-face {
