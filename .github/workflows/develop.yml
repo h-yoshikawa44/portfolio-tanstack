@@ -48,7 +48,7 @@ jobs:
         run: npm ci
 
       - name: Lint & Format Check
-        run: npm run lint
+        run: npm run check
 
       - name: Slack Notification by NonSuccess
         uses: slackapi/slack-github-action@v2
