@@ -9,6 +9,8 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SkillRouteImport } from './routes/skill'
+import { Route as My_productsRouteImport } from './routes/my_products'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DemoStorybookRouteImport } from './routes/demo/storybook'
 import { Route as DemoStartServerFuncsRouteImport } from './routes/demo/start.server-funcs'
@@ -19,6 +21,16 @@ import { Route as DemoStartSsrSpaModeRouteImport } from './routes/demo/start.ssr
 import { Route as DemoStartSsrFullSsrRouteImport } from './routes/demo/start.ssr.full-ssr'
 import { Route as DemoStartSsrDataOnlyRouteImport } from './routes/demo/start.ssr.data-only'
 
+const SkillRoute = SkillRouteImport.update({
+  id: '/skill',
+  path: '/skill',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const My_productsRoute = My_productsRouteImport.update({
+  id: '/my_products',
+  path: '/my_products',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -67,6 +79,8 @@ const DemoStartSsrDataOnlyRoute = DemoStartSsrDataOnlyRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/my_products': typeof My_productsRoute
+  '/skill': typeof SkillRoute
   '/demo/storybook': typeof DemoStorybookRoute
   '/demo/api/names': typeof DemoApiNamesRoute
   '/demo/start/api-request': typeof DemoStartApiRequestRoute
@@ -78,6 +92,8 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/my_products': typeof My_productsRoute
+  '/skill': typeof SkillRoute
   '/demo/storybook': typeof DemoStorybookRoute
   '/demo/api/names': typeof DemoApiNamesRoute
   '/demo/start/api-request': typeof DemoStartApiRequestRoute
@@ -90,6 +106,8 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/my_products': typeof My_productsRoute
+  '/skill': typeof SkillRoute
   '/demo/storybook': typeof DemoStorybookRoute
   '/demo/api/names': typeof DemoApiNamesRoute
   '/demo/start/api-request': typeof DemoStartApiRequestRoute
@@ -103,6 +121,8 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/my_products'
+    | '/skill'
     | '/demo/storybook'
     | '/demo/api/names'
     | '/demo/start/api-request'
@@ -114,6 +134,8 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/my_products'
+    | '/skill'
     | '/demo/storybook'
     | '/demo/api/names'
     | '/demo/start/api-request'
@@ -125,6 +147,8 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/my_products'
+    | '/skill'
     | '/demo/storybook'
     | '/demo/api/names'
     | '/demo/start/api-request'
@@ -137,6 +161,8 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  My_productsRoute: typeof My_productsRoute
+  SkillRoute: typeof SkillRoute
   DemoStorybookRoute: typeof DemoStorybookRoute
   DemoApiNamesRoute: typeof DemoApiNamesRoute
   DemoStartApiRequestRoute: typeof DemoStartApiRequestRoute
@@ -149,6 +175,20 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/skill': {
+      id: '/skill'
+      path: '/skill'
+      fullPath: '/skill'
+      preLoaderRoute: typeof SkillRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/my_products': {
+      id: '/my_products'
+      path: '/my_products'
+      fullPath: '/my_products'
+      preLoaderRoute: typeof My_productsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -217,6 +257,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  My_productsRoute: My_productsRoute,
+  SkillRoute: SkillRoute,
   DemoStorybookRoute: DemoStorybookRoute,
   DemoApiNamesRoute: DemoApiNamesRoute,
   DemoStartApiRequestRoute: DemoStartApiRequestRoute,
