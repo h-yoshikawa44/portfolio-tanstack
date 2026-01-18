@@ -1,6 +1,4 @@
 import { Link } from '@tanstack/react-router';
-
-import { useState } from 'react';
 import {
   BookOpen,
   ChevronDown,
@@ -12,6 +10,7 @@ import {
   StickyNote,
   X,
 } from 'lucide-react';
+import { useState } from 'react';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +21,7 @@ export default function Header() {
   return (
     <>
       <header className="p-4 flex items-center bg-gray-800 text-white shadow-lg">
+        {/** biome-ignore lint/a11y/useButtonType: <explanation> */}
         <button
           onClick={() => setIsOpen(true)}
           className="p-2 hover:bg-gray-700 rounded-lg transition-colors"
@@ -47,6 +47,7 @@ export default function Header() {
       >
         <div className="flex items-center justify-between p-4 border-b border-gray-700">
           <h2 className="text-xl font-bold">Navigation</h2>
+          {/** biome-ignore lint/a11y/useButtonType: <explanation> */}
           <button
             onClick={() => setIsOpen(false)}
             className="p-2 hover:bg-gray-800 rounded-lg transition-colors"
@@ -111,6 +112,7 @@ export default function Header() {
               <StickyNote size={20} />
               <span className="font-medium">Start - SSR Demos</span>
             </Link>
+            {/** biome-ignore lint/a11y/useButtonType: <explanation> */}
             <button
               className="p-2 hover:bg-gray-800 rounded-lg transition-colors"
               onClick={() =>
