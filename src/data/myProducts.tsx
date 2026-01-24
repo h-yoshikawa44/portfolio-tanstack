@@ -3,6 +3,20 @@ import changeOfPace from '@/assets/images/products/change-of-pace/overview.png';
 import closeTo2 from '@/assets/images/products/close-to-2/overview.png';
 import jigsawLikePuzzle from '@/assets/images/products/jigsaw-like-puzzle/overview.png';
 
+const productImage = ({ src, alt }: { src: string; alt: string }) => {
+  return (
+    <Image
+      className="w-full h-45 rounded-tl-xl rounded-tr-xl object-cover object-[50%_0]"
+      src={src}
+      alt={alt}
+      priority
+      layout="constrained"
+      width={300}
+      height={180}
+    />
+  );
+};
+
 export type Product = {
   name: string;
   description: React.ReactElement;
@@ -21,17 +35,10 @@ export const MANAGEMENTS = [
         2023/07に Jekyll から移行。テーマは使用せず自作。
       </>
     ),
-    ProductImg: (
-      <Image
-        className="w-full h-45 rounded-tl-xl rounded-tr-xl object-cover object-[50%_0]"
-        src={changeOfPace}
-        alt="Change Of Pace - Overview"
-        priority
-        layout="constrained"
-        width={300}
-        height={180}
-      />
-    ),
+    ProductImg: productImage({
+      src: changeOfPace,
+      alt: 'Change Of Pace - Overview',
+    }),
     productLink: 'https://changeofpace.site',
     repositoryUrl: 'https://github.com/h-yoshikawa44/change-of-pace-astro',
   },
@@ -47,17 +54,7 @@ export const EVENT_PRODUCTS = [
         4択から計算結果が一番「2」に近い式をあてるゲーム。
       </>
     ),
-    ProductImg: (
-      <Image
-        className="w-full h-45 rounded-tl-xl rounded-tr-xl object-cover object-[50%_0]"
-        src={closeTo2}
-        alt="Close to 2 - Overview"
-        priority
-        layout="constrained"
-        width={300}
-        height={180}
-      />
-    ),
+    ProductImg: productImage({ src: closeTo2, alt: 'Close to 2 - Overview' }),
     productLink: 'https://h-yoshikawa44.github.io/close-to-2',
     repositoryUrl: 'https://github.com/h-yoshikawa44/close-to-2',
   },
@@ -70,17 +67,10 @@ export const EVENT_PRODUCTS = [
         ジグソーパズルっぽいパズルゲーム（※PC向け）
       </>
     ),
-    ProductImg: (
-      <Image
-        className="w-full h-45 rounded-tl-xl rounded-tr-xl object-cover object-[50%_0]"
-        src={jigsawLikePuzzle}
-        alt="Jigsaw Like Puzzle - Overview"
-        priority
-        layout="constrained"
-        width={300}
-        height={180}
-      />
-    ),
+    ProductImg: productImage({
+      src: jigsawLikePuzzle,
+      alt: 'Jigsaw Like Puzzle - Overview',
+    }),
     productLink: 'https://jigsaw-like-puzzle.web.app',
     repositoryUrl: 'https://github.com/h-yoshikawa44/jigsaw-like-puzzle',
   },
