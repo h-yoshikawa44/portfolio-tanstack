@@ -4,7 +4,7 @@ import { Hero } from '@/components/Hero/Hero';
 import { SectionBase } from '@/components/SectionBase/SectionBase';
 import { QUALIFICATIONS } from '@/data/qualification';
 import { EDITORS, ENVIRONMENTS, LANG_FRAMEWORKS } from '@/data/skill';
-import { SkillItem } from '@/features/skill/SkillItem';
+import { SkillItem } from '@/features/skill/SkillItem/SkillItem';
 
 export const Route = createFileRoute('/skill')({
   component: RouteComponent,

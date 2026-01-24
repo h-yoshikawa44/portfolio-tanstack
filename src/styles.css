@@ -55,6 +55,13 @@
   .header-double-line:after {
     right: 0;
   }
+
+   .header-left-line {
+    padding: 4px 8px;
+    color: var(--color-invert);
+    background: transparent;
+    border-left: solid 5px var(--color-invert);
+  }
 }
 
 body {
