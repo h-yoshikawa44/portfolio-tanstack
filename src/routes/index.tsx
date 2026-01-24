@@ -1,4 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
+import { Image } from '@unpic/react';
 import zennIcon from '@/assets/icons/zenn-logo-only.svg';
 import myIcon from '@/assets/images/my-icon.png';
 import { HeaderText } from '@/components/HeaderText/HeaderText';
@@ -35,7 +36,7 @@ function Home() {
         <div className="mt-2 p-4 bg-brand-primary rounded-xl text-invert">
           <div className="grid grid-cols-[1fr_2fr] md:grid-cols-[1fr_4fr]">
             <div className="p-1 rounded-[50%] bg-white w-20 h-20 md:w-26 md:h-26 flex justify-center items-center">
-              <img src={myIcon} alt="myIcon" width={88} height={64} />
+              <Image src={myIcon} alt="myIcon" width={88} height={64} />
             </div>
             <div className="flex flex-col justify-center gap-y-2">
               <p className="text-lg">Hitomi Yoshikawa</p>
@@ -98,7 +99,7 @@ function Home() {
                       title="Zenn - h_yoshikawa0724"
                       href="https://zenn.dev/h_yoshikawa0724"
                     >
-                      <img
+                      <Image
                         src={zennIcon}
                         alt="Zenn Icon"
                         width={24}
