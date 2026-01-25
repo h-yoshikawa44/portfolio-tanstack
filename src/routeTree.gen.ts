@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SkillRouteImport } from './routes/skill'
+import { Route as PolicyRouteImport } from './routes/policy'
 import { Route as My_productsRouteImport } from './routes/my_products'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DemoStorybookRouteImport } from './routes/demo/storybook'
@@ -24,6 +25,11 @@ import { Route as DemoStartSsrDataOnlyRouteImport } from './routes/demo/start.ss
 const SkillRoute = SkillRouteImport.update({
   id: '/skill',
   path: '/skill',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PolicyRoute = PolicyRouteImport.update({
+  id: '/policy',
+  path: '/policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const My_productsRoute = My_productsRouteImport.update({
@@ -80,6 +86,7 @@ const DemoStartSsrDataOnlyRoute = DemoStartSsrDataOnlyRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/my_products': typeof My_productsRoute
+  '/policy': typeof PolicyRoute
   '/skill': typeof SkillRoute
   '/demo/storybook': typeof DemoStorybookRoute
   '/demo/api/names': typeof DemoApiNamesRoute
@@ -93,6 +100,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/my_products': typeof My_productsRoute
+  '/policy': typeof PolicyRoute
   '/skill': typeof SkillRoute
   '/demo/storybook': typeof DemoStorybookRoute
   '/demo/api/names': typeof DemoApiNamesRoute
@@ -107,6 +115,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/my_products': typeof My_productsRoute
+  '/policy': typeof PolicyRoute
   '/skill': typeof SkillRoute
   '/demo/storybook': typeof DemoStorybookRoute
   '/demo/api/names': typeof DemoApiNamesRoute
@@ -122,6 +131,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/my_products'
+    | '/policy'
     | '/skill'
     | '/demo/storybook'
     | '/demo/api/names'
@@ -135,6 +145,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/my_products'
+    | '/policy'
     | '/skill'
     | '/demo/storybook'
     | '/demo/api/names'
@@ -148,6 +159,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/my_products'
+    | '/policy'
     | '/skill'
     | '/demo/storybook'
     | '/demo/api/names'
@@ -162,6 +174,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   My_productsRoute: typeof My_productsRoute
+  PolicyRoute: typeof PolicyRoute
   SkillRoute: typeof SkillRoute
   DemoStorybookRoute: typeof DemoStorybookRoute
   DemoApiNamesRoute: typeof DemoApiNamesRoute
@@ -180,6 +193,13 @@ declare module '@tanstack/react-router' {
       path: '/skill'
       fullPath: '/skill'
       preLoaderRoute: typeof SkillRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/policy': {
+      id: '/policy'
+      path: '/policy'
+      fullPath: '/policy'
+      preLoaderRoute: typeof PolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/my_products': {
@@ -258,6 +278,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   My_productsRoute: My_productsRoute,
+  PolicyRoute: PolicyRoute,
   SkillRoute: SkillRoute,
   DemoStorybookRoute: DemoStorybookRoute,
   DemoApiNamesRoute: DemoApiNamesRoute,

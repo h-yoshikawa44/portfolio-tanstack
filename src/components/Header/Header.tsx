@@ -1,6 +1,8 @@
 import { Link } from '@tanstack/react-router';
 import { Image } from '@unpic/react';
 import myIcon from '@/assets/images/my-icon.png';
+import { SOCIAL_LINK } from '@/data/social';
+import { Anchor } from '../Anchor/Anchor';
 
 export function Header() {
   return (
@@ -13,13 +15,20 @@ export function Header() {
       <nav>
         <ul className="flex gap-x-4 text-invert items-center h-full">
           <li>
-            <Link to="/skill">Skill</Link>
+            <Link className="hover:underline underline-offset-2" to="/skill">
+              Skill
+            </Link>
           </li>
           <li>
-            <Link to="/my_products">MyProducts</Link>
+            <Link
+              className="hover:underline underline-offset-2"
+              to="/my_products"
+            >
+              MyProducts
+            </Link>
           </li>
           <li>
-            <a href="https://changeofpace.site">Blog</a>
+            <Anchor href={SOCIAL_LINK.BLOG}>Blog</Anchor>
           </li>
         </ul>
       </nav>

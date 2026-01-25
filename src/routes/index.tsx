@@ -5,6 +5,7 @@ import myIcon from '@/assets/images/my-icon.png';
 import { HeaderText } from '@/components/HeaderText/HeaderText';
 import { Hero } from '@/components/Hero/Hero';
 import { SectionBase } from '@/components/SectionBase/SectionBase';
+import { SOCIAL_LINK } from '@/data/social';
 
 export const Route = createFileRoute('/')({ component: Home });
 
@@ -62,14 +63,14 @@ function Home() {
                     <a
                       className=" bg-white rounded-[50%] w-9 h-9 p-1 flex items-center justify-center"
                       title="X - @yoshi44_lion"
-                      href="https://x.com/yoshi44_lion"
+                      href={SOCIAL_LINK.X}
                     >
                       <span className="i-devicon-twitter w-6 h-6"></span>
                     </a>
                     <a
                       className=" bg-white rounded-[50%] w-9 h-9 p-1 flex items-center justify-center"
                       title="Bluesky - @h-yoshikawa44.bsky.social"
-                      href="https://bsky.app/profile/h-yoshikawa44.bsky.social"
+                      href={SOCIAL_LINK.BLUESKY}
                     >
                       <span className="i-bi-bluesky w-6 h-6 bg-black"></span>
                     </a>
@@ -83,21 +84,21 @@ function Home() {
                     <a
                       className="bg-white rounded-[50%] w-9 h-9 p-1 flex items-center justify-center"
                       title="GitHub - @h-yoshikawa44"
-                      href="https://github.com/h-yoshikawa44"
+                      href={SOCIAL_LINK.GITHUB}
                     >
                       <span className="i-devicon-github w-6 h-6"></span>
                     </a>
                     <a
                       className="bg-white rounded-[50%] w-9 h-9 p-1 flex items-center justify-center"
                       title="個人ブログ"
-                      href="https://changeofpace.site"
+                      href={SOCIAL_LINK.BLOG}
                     >
                       <span className="i-bi-feather w-6 h-6 bg-black"></span>
                     </a>
                     <a
                       className="bg-white rounded-[50%] w-9 h-9 p-1 flex items-center justify-center"
                       title="Zenn - h_yoshikawa0724"
-                      href="https://zenn.dev/h_yoshikawa0724"
+                      href={SOCIAL_LINK.ZENN}
                     >
                       <Image
                         src={zennIcon}
