@@ -1,6 +1,7 @@
 import { Link } from '@tanstack/react-router';
 import { Image } from '@unpic/react';
 import myIcon from '@/assets/images/my-icon.png';
+import { SOCIAL_LINK } from '@/data/social';
 import { Anchor } from '../Anchor/Anchor';
 
 export function Header() {
@@ -27,7 +28,7 @@ export function Header() {
             </Link>
           </li>
           <li>
-            <Anchor href="https://changeofpace.site">Blog</Anchor>
+            <Anchor href={SOCIAL_LINK.BLOG}>Blog</Anchor>
           </li>
         </ul>
       </nav>

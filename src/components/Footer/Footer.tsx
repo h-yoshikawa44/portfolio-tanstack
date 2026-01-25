@@ -1,4 +1,5 @@
 import { Link } from '@tanstack/react-router';
+import { SOCIAL_LINK } from '@/data/social';
 import { Anchor } from '../Anchor/Anchor';
 
 export function Footer() {
@@ -16,21 +17,19 @@ export function Footer() {
         <ul className="flex flex-col gap-y-2">
           <span className="text-lg font-bold  mb-2">Social</span>
           <li>
-            <Anchor href="https://x.com/yoshi44_lion">X</Anchor>
+            <Anchor href={SOCIAL_LINK.X}>X</Anchor>
           </li>
           <li>
-            <Anchor href="https://bsky.app/profile/h-yoshikawa44.bsky.social">
-              Bluesky
-            </Anchor>
+            <Anchor href={SOCIAL_LINK.BLUESKY}>Bluesky</Anchor>
           </li>
           <li>
-            <Anchor href="https://github.com/h-yoshikawa44">GitHub</Anchor>
+            <Anchor href={SOCIAL_LINK.GITHUB}>GitHub</Anchor>
           </li>
           <li>
-            <Anchor href="https://changeofpace.site">Blog</Anchor>
+            <Anchor href={SOCIAL_LINK.BLOG}>Blog</Anchor>
           </li>
           <li>
-            <Anchor href="https://zenn.dev/h_yoshikawa0724">Zenn</Anchor>
+            <Anchor href={SOCIAL_LINK.ZENN}>Zenn</Anchor>
           </li>
         </ul>
       </div>
