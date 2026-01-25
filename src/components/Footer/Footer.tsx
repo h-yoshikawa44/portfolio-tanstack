@@ -1,4 +1,5 @@
 import { Link } from '@tanstack/react-router';
+import { Anchor } from '../Anchor/Anchor';
 
 export function Footer() {
   return (
@@ -15,44 +16,21 @@ export function Footer() {
         <ul className="flex flex-col gap-y-2">
           <span className="text-lg font-bold  mb-2">Social</span>
           <li>
-            <a
-              className="hover:underline underline-offset-2"
-              href="https://x.com/yoshi44_lion"
-            >
-              X
-            </a>
+            <Anchor href="https://x.com/yoshi44_lion">X</Anchor>
           </li>
           <li>
-            <a
-              className="hover:underline underline-offset-2"
-              href="https://bsky.app/profile/h-yoshikawa44.bsky.social"
-            >
+            <Anchor href="https://bsky.app/profile/h-yoshikawa44.bsky.social">
               Bluesky
-            </a>
+            </Anchor>
           </li>
           <li>
-            <a
-              className="hover:underline underline-offset-2"
-              href="https://github.com/h-yoshikawa44"
-            >
-              GitHub
-            </a>
+            <Anchor href="https://github.com/h-yoshikawa44">GitHub</Anchor>
           </li>
           <li>
-            <a
-              className="hover:underline underline-offset-2"
-              href="https://changeofpace.site"
-            >
-              Blog
-            </a>
+            <Anchor href="https://changeofpace.site">Blog</Anchor>
           </li>
           <li>
-            <a
-              className="hover:underline underline-offset-2"
-              href="https://zenn.dev/h_yoshikawa0724"
-            >
-              Zenn
-            </a>
+            <Anchor href="https://zenn.dev/h_yoshikawa0724">Zenn</Anchor>
           </li>
         </ul>
       </div>
