@@ -4,7 +4,7 @@ import { Anchor } from '../Anchor/Anchor';
 
 export function Footer() {
   return (
-    <footer className="from-brand-start to-brand-end bg-linear-to-b py-6 px-16  text-invert w-full">
+    <footer className="from-brand-start to-brand-end bg-linear-to-b py-6 px-8 md:px-16 text-invert w-full">
       <div className="grid grid-cols-2">
         <ul className="flex flex-col gap-y-2">
           <span className="text-lg font-bold mb-2">Site</span>
