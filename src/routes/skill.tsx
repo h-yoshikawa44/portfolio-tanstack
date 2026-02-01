@@ -12,6 +12,7 @@ export const Route = createFileRoute('/skill')({
       {
         title: "skill | h-yoshikawa44's Portfolio",
       },
+      { property: 'og:type', content: 'profile' },
     ],
   }),
   component: RouteComponent,

@@ -6,6 +6,11 @@ import { Header } from '@/components/Header/Header';
 
 import appCss from '@/styles.css?url';
 
+const title = "h-yoshikawa44's Portfolio";
+const description =
+  'Web Developer である h-yoshikawa44 のポートフォリオサイトです。';
+const ogpImage = '/ogp.png';
+
 export const Route = createRootRoute({
   head: () => ({
     meta: [
@@ -17,13 +22,22 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: "h-yoshikawa44's Portfolio",
+        title,
       },
       {
         name: 'description',
-        content:
-          'Web Developer である h-yoshikawa44 のポートフォリオサイトです。',
+        content: description,
       },
+      // Open Graph
+      { property: 'og:title', content: title },
+      { property: 'og:description', content: description },
+      { property: 'og:image', content: ogpImage },
+      { property: 'og:type', content: 'profile' },
+      // Twitter Card
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: title },
+      { name: 'twitter:description', content: description },
+      { name: 'twitter:image', content: ogpImage },
     ],
     links: [
       {

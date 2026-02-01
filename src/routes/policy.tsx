@@ -10,6 +10,7 @@ export const Route = createFileRoute('/policy')({
       {
         title: "policy | h-yoshikawa44's Portfolio",
       },
+      { property: 'og:type', content: 'website' },
     ],
   }),
   component: RouteComponent,

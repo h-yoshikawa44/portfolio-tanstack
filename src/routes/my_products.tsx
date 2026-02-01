@@ -12,6 +12,7 @@ export const Route = createFileRoute('/my_products')({
       {
         title: "myProducts | h-yoshikawa44's Portfolio",
       },
+      { property: 'og:type', content: 'profile' },
     ],
   }),
   component: RouteComponent,
