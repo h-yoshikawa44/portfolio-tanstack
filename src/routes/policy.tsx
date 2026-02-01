@@ -5,6 +5,14 @@ import { SectionBase } from '@/components/SectionBase/SectionBase';
 import { SubHeaderText } from '@/components/SubHeaderText/SubHeaderText';
 
 export const Route = createFileRoute('/policy')({
+  head: () => ({
+    meta: [
+      {
+        title: "policy | h-yoshikawa44's Portfolio",
+      },
+      { property: 'og:type', content: 'website' },
+    ],
+  }),
   component: RouteComponent,
 });
 

@@ -7,6 +7,14 @@ import { EVENT_PRODUCTS, MANAGEMENTS } from '@/data/myProducts';
 import { ProductItem } from '@/features/product/ProductItem/ProductItem';
 
 export const Route = createFileRoute('/my_products')({
+  head: () => ({
+    meta: [
+      {
+        title: "myProducts | h-yoshikawa44's Portfolio",
+      },
+      { property: 'og:type', content: 'profile' },
+    ],
+  }),
   component: RouteComponent,
 });
 
