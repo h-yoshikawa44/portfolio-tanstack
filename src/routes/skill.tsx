@@ -7,6 +7,13 @@ import { EDITORS, ENVIRONMENTS, LANG_FRAMEWORKS } from '@/data/skill';
 import { SkillItem } from '@/features/skill/SkillItem/SkillItem';
 
 export const Route = createFileRoute('/skill')({
+  head: () => ({
+    meta: [
+      {
+        title: "skill | h-yoshikawa44's Portfolio",
+      },
+    ],
+  }),
   component: RouteComponent,
 });
 
