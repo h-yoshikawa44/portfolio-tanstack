@@ -6,6 +6,7 @@ import { Header } from '@/components/Header/Header';
 import { HeaderText } from '@/components/HeaderText/HeaderText';
 import { Hero } from '@/components/Hero/Hero';
 import { SectionBase } from '@/components/SectionBase/SectionBase';
+import { clientEnv } from '@/config/env';
 import appCss from '@/styles.css?url';
 
 const title = "h-yoshikawa44's Portfolio";
@@ -47,6 +48,23 @@ export const Route = createRootRoute({
         href: appCss,
       },
     ],
+    scripts: import.meta.env.PROD
+      ? [
+          {
+            src: `https://www.googletagmanager.com/gtag/js?id=${clientEnv.VITE_GOOGLE_ANALYTICS_ID}`,
+            async: true,
+          },
+          {
+            children: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${clientEnv.VITE_GOOGLE_ANALYTICS_ID}');
+        `,
+          },
+        ]
+      : [],
   }),
 
   shellComponent: RootDocument,
