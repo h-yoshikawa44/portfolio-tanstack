@@ -3,7 +3,9 @@ import { createRootRoute, HeadContent, Scripts } from '@tanstack/react-router';
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools';
 import { Footer } from '@/components/Footer/Footer';
 import { Header } from '@/components/Header/Header';
-
+import { HeaderText } from '@/components/HeaderText/HeaderText';
+import { Hero } from '@/components/Hero/Hero';
+import { SectionBase } from '@/components/SectionBase/SectionBase';
 import appCss from '@/styles.css?url';
 
 const title = "h-yoshikawa44's Portfolio";
@@ -48,6 +50,7 @@ export const Route = createRootRoute({
   }),
 
   shellComponent: RootDocument,
+  notFoundComponent: NotFound,
 });
 
 function RootDocument({ children }: { children: React.ReactNode }) {
@@ -74,5 +77,26 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <Scripts />
       </body>
     </html>
+  );
+}
+
+function NotFound() {
+  return (
+    <main className="flex min-h-screen w-full flex-col items-center justify-between">
+      <Hero mainTitle="Not Found" subTitle="ページが見つかりません" />
+      <div className="grow w-full bg-brand-secondary">
+        <SectionBase>
+          <HeaderText>404ページ</HeaderText>
+          <p className="mt-2">お探しのページが見つかりませんでした。</p>
+          <p>
+            恐れ入りますが、
+            <a className="underline underline-offset-2" href="/">
+              Home
+            </a>
+            やヘッダーからアクセスしたいページへどうぞ。
+          </p>
+        </SectionBase>
+      </div>
+    </main>
   );
 }
