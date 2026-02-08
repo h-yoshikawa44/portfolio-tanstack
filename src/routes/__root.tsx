@@ -41,6 +41,13 @@ export const Route = createRootRoute({
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description },
       { name: 'twitter:image', content: ogpImage },
+      // Google Search Console
+      import.meta.env.PROD
+        ? {
+            name: 'google-site-verification',
+            content: clientEnv.VITE_GOOGLE_SITE_VERIFICATION,
+          }
+        : {},
     ],
     links: [
       {

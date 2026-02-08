@@ -2,6 +2,7 @@ import { z } from 'zod';
 
 const clientEnvSchema = z.object({
   VITE_GOOGLE_ANALYTICS_ID: z.string(),
+  VITE_GOOGLE_SITE_VERIFICATION: z.string(),
 });
 
 // Validate client environment
