@@ -27,6 +27,7 @@
   --color-brand-end: #0e0e0e;
   --color-invert: #ffffff;
   --color-table-border: #6a7282;
+  --color-icon: #111827;
 }
 
 @layer components {

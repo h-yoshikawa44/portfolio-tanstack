@@ -66,14 +66,14 @@ function Home() {
                         title="X - @yoshi44_lion"
                         href={SOCIAL_LINK.X}
                       >
-                        <span className="i-devicon-twitter w-6 h-6"></span>
+                        <span className="i-devicon-twitter w-6 h-6 text-icon"></span>
                       </a>
                       <a
                         className=" bg-white rounded-[50%] w-9 h-9 p-1 flex items-center justify-center"
                         title="Bluesky - @h-yoshikawa44.bsky.social"
                         href={SOCIAL_LINK.BLUESKY}
                       >
-                        <span className="i-bi-bluesky w-6 h-6 bg-black"></span>
+                        <span className="i-bi-bluesky w-6 h-6 bg-icon"></span>
                       </a>
                     </div>
                   </td>
@@ -87,14 +87,14 @@ function Home() {
                         title="GitHub - @h-yoshikawa44"
                         href={SOCIAL_LINK.GITHUB}
                       >
-                        <span className="i-devicon-github w-6 h-6"></span>
+                        <span className="i-devicon-github w-6 h-6 text-icon"></span>
                       </a>
                       <a
                         className="bg-white rounded-[50%] w-9 h-9 p-1 flex items-center justify-center"
                         title="個人ブログ"
                         href={SOCIAL_LINK.BLOG}
                       >
-                        <span className="i-bi-feather w-6 h-6 bg-black"></span>
+                        <span className="i-bi-feather w-6 h-6 bg-icon"></span>
                       </a>
                       <a
                         className="bg-white rounded-[50%] w-9 h-9 p-1 flex items-center justify-center"
