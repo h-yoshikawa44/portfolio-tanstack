@@ -1,3 +1,5 @@
+// biome-ignore-all lint: React Bits のコードをなるべく維持するので無効にする
+// https://reactbits.dev/text-animations/circular-text
 import {
   type MotionValue,
   motion,
@@ -7,8 +9,6 @@ import {
 } from 'motion/react';
 import type React from 'react';
 import { useEffect } from 'react';
-
-// https://reactbits.dev/text-animations/circular-text
 
 interface CircularTextProps {
   text: string;

@@ -1,3 +1,5 @@
+// biome-ignore-all lint: React Bits のコードをなるべく維持するので無効にする
+// https://reactbits.dev/text-animations/text-type
 'use client';
 
 import { gsap } from 'gsap';
@@ -10,8 +12,6 @@ import {
   useRef,
   useState,
 } from 'react';
-
-// https://reactbits.dev/text-animations/text-type
 
 interface TextTypeProps {
   className?: string;

@@ -1,9 +1,9 @@
+// biome-ignore-all lint: React Bits のコードをなるべく維持するので無効にする
+// https://reactbits.dev/animations/fade-content
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import type * as React from 'react';
 import { useEffect, useRef } from 'react';
-
-// https://reactbits.dev/animations/fade-content
 
 gsap.registerPlugin(ScrollTrigger);
 
