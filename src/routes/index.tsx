@@ -36,7 +36,7 @@ function Home() {
             プロフィール
           </HeaderText>
           <div className="mt-2 p-4 bg-brand-primary rounded-xl text-invert">
-            <div className="grid grid-cols-[1fr_2fr] md:grid-cols-[1fr_4fr]">
+            <div className="flex gap-x-6 md:gap-x-8">
               <div className="p-1 rounded-[50%] bg-white w-20 h-20 md:w-26 md:h-26 flex justify-center items-center">
                 <Image src={myIcon} alt="myIcon" width={88} height={64} />
               </div>
