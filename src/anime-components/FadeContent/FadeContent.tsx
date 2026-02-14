@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import type * as React from 'react';
+import { useEffect, useRef } from 'react';
 
 // https://reactbits.dev/animations/fade-content
 

@@ -1,5 +1,5 @@
-import { FadeContent } from '@/anime-components/FadeContent/FadeContent';
 import type { PropsWithChildren } from 'react';
+import { FadeContent } from '@/anime-components/FadeContent/FadeContent';
 
 export function SectionBase({ children }: PropsWithChildren) {
   return (

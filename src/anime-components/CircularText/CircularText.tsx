@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react';
 import {
+  type MotionValue,
   motion,
+  type Transition,
   useAnimation,
   useMotionValue,
-  MotionValue,
-  Transition,
 } from 'motion/react';
+import type React from 'react';
+import { useEffect } from 'react';
 
 // https://reactbits.dev/text-animations/circular-text
 

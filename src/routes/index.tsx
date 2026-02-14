@@ -1,12 +1,12 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { Image } from '@unpic/react';
+import { CircularText } from '@/anime-components/CircularText/CircularText';
 import zennIcon from '@/assets/icons/zenn-logo-only.svg';
 import myIcon from '@/assets/images/my-icon.png';
 import { HeaderText } from '@/components/HeaderText/HeaderText';
 import { Hero } from '@/components/Hero/Hero';
 import { SectionBase } from '@/components/SectionBase/SectionBase';
 import { SOCIAL_LINK } from '@/data/social';
-import { CircularText } from '@/anime-components/CircularText/CircularText';
 
 export const Route = createFileRoute('/')({ component: Home });
 

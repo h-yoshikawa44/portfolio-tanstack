@@ -1,15 +1,15 @@
 'use client';
 
+import { gsap } from 'gsap';
 import {
-  ElementType,
+  createElement,
+  type ElementType,
+  useCallback,
   useEffect,
+  useMemo,
   useRef,
   useState,
-  createElement,
-  useMemo,
-  useCallback,
 } from 'react';
-import { gsap } from 'gsap';
 
 // https://reactbits.dev/text-animations/text-type
 
