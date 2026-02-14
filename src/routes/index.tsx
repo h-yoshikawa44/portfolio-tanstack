@@ -6,6 +6,7 @@ import { HeaderText } from '@/components/HeaderText/HeaderText';
 import { Hero } from '@/components/Hero/Hero';
 import { SectionBase } from '@/components/SectionBase/SectionBase';
 import { SOCIAL_LINK } from '@/data/social';
+import { CircularText } from '@/anime-components/CircularText/CircularText';
 
 export const Route = createFileRoute('/')({ component: Home });
 
@@ -37,8 +38,11 @@ function Home() {
           </HeaderText>
           <div className="mt-2 p-4 bg-brand-primary rounded-xl text-invert">
             <div className="flex gap-x-6 md:gap-x-8">
-              <div className="p-1 rounded-[50%] bg-white w-20 h-20 md:w-26 md:h-26 flex justify-center items-center">
-                <Image src={myIcon} alt="myIcon" width={88} height={64} />
+              <div className="relative">
+                <CircularText text="h-yoshikawa44 h-yoshikawa44 " />
+                <div className="p-1 rounded-[50%] bg-white w-20 h-20 md:w-24 md:h-24 flex justify-center items-center bottom-6 left-6 absolute">
+                  <Image src={myIcon} alt="myIcon" width={88} height={64} />
+                </div>
               </div>
               <div className="flex flex-col justify-center gap-y-2">
                 <p className="text-lg">Hitomi Yoshikawa</p>
