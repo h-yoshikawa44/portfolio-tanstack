@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { Image } from '@unpic/react';
+import { CircularText } from '@/anime-components/CircularText/CircularText';
 import zennIcon from '@/assets/icons/zenn-logo-only.svg';
 import myIcon from '@/assets/images/my-icon.png';
 import { HeaderText } from '@/components/HeaderText/HeaderText';
@@ -36,9 +37,12 @@ function Home() {
             プロフィール
           </HeaderText>
           <div className="mt-2 p-4 bg-brand-primary rounded-xl text-invert">
-            <div className="grid grid-cols-[1fr_2fr] md:grid-cols-[1fr_4fr]">
-              <div className="p-1 rounded-[50%] bg-white w-20 h-20 md:w-26 md:h-26 flex justify-center items-center">
-                <Image src={myIcon} alt="myIcon" width={88} height={64} />
+            <div className="flex gap-x-6 md:gap-x-8">
+              <div className="relative">
+                <CircularText text="h-yoshikawa44 h-yoshikawa44 " />
+                <div className="p-1 rounded-[50%] bg-white w-20 h-20 md:w-24 md:h-24 flex justify-center items-center bottom-6 left-6 absolute">
+                  <Image src={myIcon} alt="myIcon" width={88} height={64} />
+                </div>
               </div>
               <div className="flex flex-col justify-center gap-y-2">
                 <p className="text-lg">Hitomi Yoshikawa</p>
@@ -66,14 +70,14 @@ function Home() {
                         title="X - @yoshi44_lion"
                         href={SOCIAL_LINK.X}
                       >
-                        <span className="i-devicon-twitter w-6 h-6"></span>
+                        <span className="i-devicon-twitter w-6 h-6 text-icon"></span>
                       </a>
                       <a
                         className=" bg-white rounded-[50%] w-9 h-9 p-1 flex items-center justify-center"
                         title="Bluesky - @h-yoshikawa44.bsky.social"
                         href={SOCIAL_LINK.BLUESKY}
                       >
-                        <span className="i-bi-bluesky w-6 h-6 bg-black"></span>
+                        <span className="i-bi-bluesky w-6 h-6 bg-icon"></span>
                       </a>
                     </div>
                   </td>
@@ -87,14 +91,14 @@ function Home() {
                         title="GitHub - @h-yoshikawa44"
                         href={SOCIAL_LINK.GITHUB}
                       >
-                        <span className="i-devicon-github w-6 h-6"></span>
+                        <span className="i-devicon-github w-6 h-6 text-icon"></span>
                       </a>
                       <a
                         className="bg-white rounded-[50%] w-9 h-9 p-1 flex items-center justify-center"
                         title="個人ブログ"
                         href={SOCIAL_LINK.BLOG}
                       >
-                        <span className="i-bi-feather w-6 h-6 bg-black"></span>
+                        <span className="i-bi-feather w-6 h-6 bg-icon"></span>
                       </a>
                       <a
                         className="bg-white rounded-[50%] w-9 h-9 p-1 flex items-center justify-center"
