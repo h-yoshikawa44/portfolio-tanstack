@@ -4,7 +4,7 @@ pre-commit:
     js-ts-fixer:
       glob: "src/**/*.{js,jsx,ts,tsx}"
       run: |
-        npx biome format --write --log-level=error {staged_files}
+        npx biome check --write --log-level=error {staged_files}
       stage_fixed: true
       skip:
         - merge
