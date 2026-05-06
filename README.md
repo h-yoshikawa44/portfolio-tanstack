@@ -5,7 +5,7 @@ h-yoshikawa44 のポートフォリオサイト
 - Node.js: 24.15.0
 - TypeScript: 5.9.3
 - React: 19.2.5
-- TanSlack Start: 1.159.0
+- TanStack Start: 1.167.64
 
 ## 環境構築
 パッケージインストール
