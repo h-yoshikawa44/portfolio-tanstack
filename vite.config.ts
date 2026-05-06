@@ -23,8 +23,8 @@ const config = defineConfig({
     viteReact(),
   ],
   resolve: {
-    tsconfigPaths: true
-  }
+    tsconfigPaths: true,
+  },
 });
 
 export default config;
