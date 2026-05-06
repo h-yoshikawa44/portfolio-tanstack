@@ -1,11 +1,11 @@
 # h-yoshikawa44's Portfolio
-h-yoshikawa44 のポートフォリオサイト（リプレース案）
+h-yoshikawa44 のポートフォリオサイト
 
 ## 構成
-- Node.js: 24.13.0
-- TypeScript: 5.9.3
-- React: 19.2.4
-- TanSlack Start: 1.159.0
+- Node.js: 24.15.0
+- TypeScript: 6.0s.3
+- React: 19.2.5
+- TanStack Start: 1.167.64
 
 ## 環境構築
 パッケージインストール
