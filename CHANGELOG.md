@@ -1,5 +1,10 @@
 # h-yoshikawa44's Portfolio
 
+## v1.1.1（2026-07-20）
+### Data Updated
+- スキルの内容更新(#32)
+  - Claude Code も新しく追加
+
 ## v1.1.0（2026-05-06）
 ### Updated
 Node.js、各種パッケージのアプデ(#27)
