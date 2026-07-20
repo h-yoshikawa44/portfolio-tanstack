@@ -13,7 +13,7 @@ export const EDITORS = [
   {
     iconClassName: 'i-devicon-intellij',
     name: 'IntelliJ IDEA',
-    description: <>Kotlin のコーディングでたまに使用する程度。</>,
+    description: <>Kotlin のリーディングでたまに使用する程度。</>,
   },
 ] satisfies Skill[];
 
@@ -29,7 +29,21 @@ export const ENVIRONMENTS = [
       </>
     ),
   },
-];
+] satisfies Skill[];
+
+export const AIS = [
+  {
+    iconClassName: 'i-material-icon-theme-claude',
+    name: 'Claude Code',
+    description: (
+      <>
+        案件業務、個人開発で使用。
+        <br />
+        調査、コーディング（実装、テスト）、レビューなどで活用している。
+      </>
+    ),
+  },
+] satisfies Skill[];
 
 export const LANG_FRAMEWORKS = [
   {
@@ -48,7 +62,8 @@ export const LANG_FRAMEWORKS = [
     name: 'CSS',
     description: (
       <>
-        CSS in JS の中で書いていたりもする。
+        最近は Tailwind CSS
+        を使うことが多いので、直接書く機会は少ないが知識は使っている。
         <br />
         PostCSS, LightningCSS を使って新しめの構文もキャッチアップしていきたい。
       </>
@@ -59,7 +74,7 @@ export const LANG_FRAMEWORKS = [
     name: 'JavaScript',
     description: (
       <>
-        実務使用経験ありであるが、基本的にフロントエンドのみ。
+        使用経験は基本的にフロントエンドのみ。
         <br />
         TypeScript をメインで使用しているので、素で使うことはあまりない。
       </>
@@ -68,23 +83,16 @@ export const LANG_FRAMEWORKS = [
   {
     iconClassName: 'i-devicon-typescript',
     name: 'TypeScript',
-    description: (
-      <>
-        自分の中でフロントエンド側のコードを書く際のデファクトにしたい言語。
-        <br />
-        得意言語として伸ばしていきたい。
-      </>
-    ),
+    description: <>案件業務、個人開発ともにメインで使っている言語。</>,
   },
   {
     iconClassName: 'i-devicon-react',
     name: 'React',
     description: (
       <>
-        実務使用経験あり。
+        案件業務、個人開発ともに、フロントエンドでメインに使っている技術。
         <br />
-        自分のスキルのうち、フロントエンドでメインにしたい技術。投稿している技術記事は
-        React 記事が多い。
+        投稿している技術記事は React 記事が多い。
       </>
     ),
   },
@@ -93,9 +101,9 @@ export const LANG_FRAMEWORKS = [
     name: 'Next.js',
     description: (
       <>
-        自分の得意技術として伸ばしていきたいフレームワーク。
+        案件業務でメインに使っているフレームワーク。
         <br />
-        App Router も実務で書いてはいる。
+        App Router も経験あり。
       </>
     ),
   },
@@ -116,7 +124,7 @@ export const LANG_FRAMEWORKS = [
     name: 'Kotlin',
     description: (
       <>
-        個人勉強 + 実務でたまに書く程度。
+        以前は案件業務で使うことがあったが、最近はご無沙汰。
         <br />
         Java の後継的位置づけということもあり、多少興味がある。
       </>
@@ -127,10 +135,10 @@ export const LANG_FRAMEWORKS = [
     name: 'Spring Boot',
     description: (
       <>
-        実務使用経験あり。
+        これも以前は案件業務で使うことがあったが、最近はご無沙汰。
         <br />
         テンプレートエンジンは使用せず、API としての開発経験のみ。
       </>
     ),
   },
-];
+] satisfies Skill[];

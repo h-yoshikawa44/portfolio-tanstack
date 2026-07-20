@@ -41,6 +41,7 @@
     "@egoist/tailwindcss-icons": "^1.9.2",
     "@iconify-json/bi": "^1.2.7",
     "@iconify-json/devicon": "^1.2.62",
+    "@iconify-json/material-icon-theme": "^1.2.69",
     "@storybook/react-vite": "^10.3.5",
     "@tailwindcss/vite": "^4.2.4",
     "@tanstack/devtools-vite": "^0.6.0",
