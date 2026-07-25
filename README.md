@@ -3,7 +3,7 @@ h-yoshikawa44 のポートフォリオサイト
 
 ## 構成
 - Node.js: 24.18.0
-- TypeScript: 6.0.3
+- TypeScript: 7.0.2
 - React: 19.2.7
 - TanStack Start: 1.168.30
 
