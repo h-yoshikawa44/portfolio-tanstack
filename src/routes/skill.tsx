@@ -72,7 +72,11 @@ function RouteComponent() {
           </ul>
         </SectionBase>
         <SectionBase>
-          <HeaderText>言語・フレームワーク</HeaderText>
+          <HeaderText>
+            言語・
+            <wbr />
+            フレームワーク
+          </HeaderText>
           <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 grid-rows-[minmax(100px,1fr)] gap-x-4 gap-y-6">
             {LANG_FRAMEWORKS.map((langFramework) => {
               return (
