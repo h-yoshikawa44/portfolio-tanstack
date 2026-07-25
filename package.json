@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.13",
-    "@cloudflare/vite-plugin": "^1.34.0",
+    "@cloudflare/vite-plugin": "^1.45.1",
     "@egoist/tailwindcss-icons": "^1.9.2",
     "@iconify-json/bi": "^1.2.7",
     "@iconify-json/devicon": "^1.2.62",
@@ -61,6 +61,6 @@
     "vite": "^8.1.5",
     "vitest": "^4.1.10",
     "web-vitals": "^5.2.0",
-    "wrangler": "^4.86.0"
+    "wrangler": "^4.112.0"
   }
 }
