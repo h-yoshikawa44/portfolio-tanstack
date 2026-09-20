@@ -5,7 +5,7 @@ h-yoshikawa44 のポートフォリオサイト
 - Node.js: 24.21.0
 - TypeScript: 7.0.2
 - React: 19.3.0
-- TanStack Start: 1.168.30
+- TanStack Start: 1.168.52
 
 ## 環境構築
 パッケージインストール
